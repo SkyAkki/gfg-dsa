@@ -1,4 +1,5 @@
 /* --------------------------------------------------------------------------- */
+
 // My Approach
 // Time complexity : O(n) (all cases)
 /* function checkPrime(num){
@@ -22,6 +23,7 @@ answer = checkPrime(1)
 console.log(answer) */
 
 /* --------------------------------------------------------------------------- */
+
 // GFG solution
 // Time Complexity : O(n) (worst case when n is prime/ best case when n is even)
 /* function checkPrime(num){
@@ -56,6 +58,7 @@ console.log(answer) */
 answer = checkPrime(100)
 console.log(answer)
  */
+
 /* --------------------------------------------------------------------------- */
 
 // Even more optimised solution
@@ -63,12 +66,12 @@ function checkPrime(num1){
     if (num1 == 1) return false;
     if (num1 == 2 || num1 == 3) return true;
     if (num1%2 == 0 || num1%3==0) return false;
-    for(i=5; i*i < num1; i=i+6){
+    for(i=5; i*i <= num1; i=i+6){
         if(num1%i == 0 || num1%(i+2) == 0){
             return false;
         }
     }
     return true;
 }
-answer = checkPrime(13)
+answer = checkPrime(25)
 console.log(answer)
